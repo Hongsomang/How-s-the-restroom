@@ -13,6 +13,7 @@ public class Restroom {
     private String restroomPwd;
     private String rmk;
     private Date insDt;
+    private String region;
 
     public int getCode() {
         return code;
@@ -92,5 +93,13 @@ public class Restroom {
 
     public void setInsDt(Date insDt) {
         this.insDt = insDt;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 }

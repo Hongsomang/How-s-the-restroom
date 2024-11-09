@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(title, stylesheet, content, script)">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/common/common.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <th:block th:if="${stylesheet!= null}">
+        <th:block th:replace="${stylesheet}"></th:block>
+    </th:block>
+</head>
+<body>
+<div class="layout">
+    <div class="sidebar">
+        <div class="logo_wrap"><img alt="logo.png"></div>
+        <div class="menu_wrap">
+            <ul class="menu_list">
+                <li class="on">
+                    <p>화장실 정보</p>
+                    <ul class="sub_menu_list">
+                        <li class="on"><a href="/public-data/list">공공데이터</a></li>
+                        <li><a href="">프렌차이즈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <th:block th:replace="${content}"></th:block>
+</div>
+
+<th:block th:if="${script != null}">
+    <th:block th:replace="${script}"></th:block>
+</th:block>
+</body>
+</html>

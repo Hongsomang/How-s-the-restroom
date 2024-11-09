@@ -1,0 +1,66 @@
+table{
+    width: 100%;
+}
+table thead{
+    display: flex;
+    background: #bfbfbf;
+    border: 1px solid #eeee;
+    color: #fff;
+}
+table tbody{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+table thead tr,table tbody tr{
+    display: flex;
+    gap: 5px;
+    padding :0 10px;
+    width: 100%;
+}
+
+table tbody tr{
+     border: 1px solid #eeee;
+    border-top: none;
+}
+table thead tr td,table tbody tr td{
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+table thead tr td.code,table tbody tr td.code{
+    width: 10%;
+}
+
+table thead tr td.addr_nm,table tbody tr td.addr_nm{
+    width: 20%;
+}
+
+table thead tr td.time,table tbody tr td.time {
+    width: 15%;
+}
+
+table thead tr td.address,table tbody tr td.address{
+    width: 40%;
+}
+
+table thead tr td.region,table tbody tr td.region {
+    width: 15%;
+}
+
+table thead tr td.manager,table tbody tr td.manager {
+    width: 10%;
+}
+
+
+ .material-symbols-outlined {
+     font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 24
+ }

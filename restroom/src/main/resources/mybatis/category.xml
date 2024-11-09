@@ -1,0 +1,8 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="category">
+    <select id="findByMainCateCode" resultType="Category">
+        SELECT CODE, NAME
+        FROM sub_category
+        WHERE MAIN_CATEGORY_CODE=#{mainCateCOde}
+    </select>
+</mapper>

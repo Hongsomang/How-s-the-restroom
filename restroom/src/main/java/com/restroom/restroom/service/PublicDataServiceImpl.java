@@ -1,6 +1,7 @@
 package com.restroom.restroom.service;
 
 import com.restroom.restroom.dao.PublicDataDao;
+import com.restroom.restroom.model.Pager;
 import com.restroom.restroom.model.Region;
 import com.restroom.restroom.model.Restroom;
 import org.jsoup.Jsoup;
@@ -36,9 +37,21 @@ public class PublicDataServiceImpl implements PublicDataService{
     public List<Restroom> reset(int categoryCode) throws IOException, NoSuchAlgorithmException, KeyManagementException {
 
         List<Restroom> list=getRestroomList(categoryCode);
-
+        System.out.println("list count "+list.size());
+        for(Restroom item : list){
+            publicDataDao.add(item);
+            System.out.println("list item");
+        }
 
         return list;
+    }
+
+    @Override
+    public List<Restroom> list(Pager pager) {
+        int total=publicDataDao.total(pager);
+        pager.setTotal(total);
+
+        return publicDataDao.list(pager);
     }
 
 
